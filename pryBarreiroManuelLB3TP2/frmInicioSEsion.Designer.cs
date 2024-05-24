@@ -32,7 +32,7 @@
             lblContraseña = new Label();
             cmdIniciar = new Button();
             txtUsuario = new TextBox();
-            txtContraseña = new TextBox();
+            txtContrasena = new TextBox();
             cmdCancelar = new Button();
             statusStrip1 = new StatusStrip();
             tssEstadoConexion = new ToolStripStatusLabel();
@@ -78,14 +78,14 @@
             txtUsuario.Size = new Size(166, 27);
             txtUsuario.TabIndex = 0;
             // 
-            // txtContraseña
+            // txtContrasena
             // 
-            txtContraseña.Font = new Font("Segoe UI", 11F);
-            txtContraseña.Location = new Point(101, 43);
-            txtContraseña.Name = "txtContraseña";
-            txtContraseña.PasswordChar = '*';
-            txtContraseña.Size = new Size(166, 27);
-            txtContraseña.TabIndex = 1;
+            txtContrasena.Font = new Font("Segoe UI", 11F);
+            txtContrasena.Location = new Point(101, 43);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
+            txtContrasena.Size = new Size(166, 27);
+            txtContrasena.TabIndex = 1;
             // 
             // cmdCancelar
             // 
@@ -123,7 +123,7 @@
             Controls.Add(cmdIniciar);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
-            Controls.Add(txtContraseña);
+            Controls.Add(txtContrasena);
             Controls.Add(txtUsuario);
             Name = "frmInicioSEsion";
             StartPosition = FormStartPosition.CenterScreen;
@@ -141,7 +141,7 @@
         private Label lblContraseña;
         private Button cmdIniciar;
         private TextBox txtUsuario;
-        private TextBox txtContraseña;
+        private TextBox txtContrasena;
         private Button cmdCancelar;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel tssEstadoConexion;

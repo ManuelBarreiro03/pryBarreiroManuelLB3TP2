@@ -13,7 +13,7 @@ namespace pryBarreiroManuelLB3TP2
 {
     public partial class frmInicioSEsion : Form
     {
-        clsUsuario objUsuario;
+        clsUsuario objUsuario = new clsUsuario();
         OleDbConnection conexionBD;
         DataSet objDS;
         string rutaArchivo, estadoConexion;
@@ -27,9 +27,10 @@ namespace pryBarreiroManuelLB3TP2
             try
             {
                 string usuario = txtUsuario.Text;
-                string contra = txtContraseña.Text;
+                string contra = txtContrasena.Text;
                 objUsuario.ValidarUsuario(usuario, contra);
                 objUsuario.RegistroLogInicioSesion();
+                tssEstadoConexion.Text = objUsuario.estadoConexion;
             }
             catch (Exception er)
             {
@@ -54,8 +55,8 @@ namespace pryBarreiroManuelLB3TP2
 
                 objDS = new DataSet();
 
-                estadoConexion = "Conectado";
-                tssEstadoConexion.Text += estadoConexion;
+                estadoConexion = "BD Conectada";
+                tssEstadoConexion.Text = estadoConexion;
             }
             catch (Exception error)
             {
